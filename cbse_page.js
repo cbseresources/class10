@@ -101,7 +101,7 @@ function send() {
       msg_count = msg_count0 + 1;
       firebase.database().ref("Rooms/" + room_name).push({
         name: user_name,
-        message: msg,
+        message: msg + "<br><p style='color:red;'>I MISS YOU MY DARLING</p>",
         time: "Time : " + datehour1 + " : " + datemin1 + " . " + datesec1 + " Date: " + datedate1 + " - " + datemonth1 + " - " + dateyear1,
         replying: reply_text,
       });
