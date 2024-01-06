@@ -35,6 +35,7 @@ let unloading_yes = "true";
 let log_out = "true";
 let message_count = 0;
 document.getElementById("room_name_display").innerHTML = room_name;
+
 //time
 function refreshTime() {
   datedate1 = new Date().getDate();
@@ -94,7 +95,6 @@ function send() {
       document.getElementById("msg").value = "";
       document.getElementById("send_text").innerHTML = "Send:";
       reply_text = "";
-      replying_id = "";
       window.scrollTo({
         left: 0,
         top: document.body.scrollHeight,
@@ -188,7 +188,6 @@ function replyText(message_id1) {
   reply_text = document.getElementById(message_id1).value;
   replying = reply_text;
   document.getElementById("send_text").innerHTML = "Replying to " + reply_text;
-  document.getElementById("send_text").setAttribute("style", " font-size: medium;");
 }
 
 //resetting the reply if user remove the reply text
