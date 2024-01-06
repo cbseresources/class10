@@ -54,21 +54,7 @@ function send() {
   //EMOJIS
   msg = msg1.replaceAll(":kissing_face_heart:", "😘").replaceAll(":kissing_face:", "😙").replaceAll(":smile_face:", "😀").replaceAll(":cute_face:", "🥺").replaceAll(":smile_face_with_hearts:", "🥰").replaceAll(":sparkling_heart:", "💖").replaceAll(":laughing_face:", "😂").replaceAll(":crying_face:", "😭").replaceAll("'", "").replaceAll("/img ", "<img class=image_50 src=");
   //Commands
-  if (msg == "/reset_database") {
-    firebase.database().ref().remove();
-    firebase.database().ref().update({
-      danger: "no",
-    });
-    document.getElementById("msg").value = "";
-  } else if (msg == "/reset_database_leave") {
-    firebase.database().ref().remove();
-    firebase.database().ref().update({
-      danger: "no",
-      version: version_present
-    });
-    document.getElementById("msg").value = "";
-    back();
-  } else if (msg == "/bye") {
+  if (msg == "/bye") {
     firebase.database().ref("/").remove();
     document.getElementById("msg").value = "";
     firebase.database().ref().update({
@@ -76,10 +62,6 @@ function send() {
       version: version_present
     });
     sneakLogout();
-  } else if (msg == "/reset_leave") {
-    firebase.database().ref("Rooms/" + room_name).remove();
-    document.getElementById("msg").value = "";
-    back();
   } else if (msg == "/get_message_count") {
     msg_count_check();
     document.getElementById("msg").value = "";
@@ -101,7 +83,7 @@ function send() {
       msg_count = msg_count0 + 1;
       firebase.database().ref("Rooms/" + room_name).push({
         name: user_name,
-        message: msg + "<br><p style=color:red;>I MISS YOU MY DARLING</p>",
+        message: msg,
         time: "Time : " + datehour1 + " : " + datemin1 + " . " + datesec1 + " Date: " + datedate1 + " - " + datemonth1 + " - " + dateyear1,
         replying: reply_text,
       });
