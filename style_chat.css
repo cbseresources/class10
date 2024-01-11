@@ -137,14 +137,11 @@ body {
 }
 
 .image_send {
-	left: 1%;
-	top: 11%;
-	position: fixed;
-	width: 10px;
-	height: min-content;
-	font-size: small;
-	font-family: 'Quicksand', sans-serif;
+	padding-top: 0.5%;
+	width: 5%;
+	height: 5%;
 }
+
 
 .image_50 {
 	width: 50%;

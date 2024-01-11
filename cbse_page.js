@@ -35,6 +35,7 @@ let unloading_yes = "true";
 let log_out = "true";
 let message_count = 0;
 document.getElementById("room_name_display").innerHTML = room_name;
+document.getElementById("version_info").innerHTML = "v" + version_present;
 
 //time
 function refreshTime() {
@@ -130,7 +131,6 @@ function getData() {
         //getting values and setting variables
         name = message_data['name'];
         message = message_data['message'];
-        like = message_data['like'];
         time = message_data['time'];
         replying = message_data['replying'];
         //message display type
@@ -275,7 +275,6 @@ function msg_count_check() {
       childData = snapshot.val();
       verify = childData;
       msg_count0 = verify['message_count'];
-      console.log(msg_count0);
       if (msg_count0 > 150) {
         document.getElementById("msg_counter").innerHTML = "150+ msg";
       } else {
