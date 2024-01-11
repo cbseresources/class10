@@ -50,8 +50,8 @@
             };
 
             function check() {
-                firebase.database().ref("/").on('value', function (snapshot) {
-                    snapshot.forEach(function (childSnapshot) {
+                firebase.database().ref("/").on('value', function(snapshot) {
+                    snapshot.forEach(function(childSnapshot) {
                         childKey = childSnapshot.key;
                         childData = snapshot.val();
                         verify = childData;
@@ -108,12 +108,12 @@
                     datemin1 + "." + datesec1;
             }
             setInterval(refreshTime, 1000);
+
         </script>
         <h1 class="header" id="end">RXDH</h1>
-        <div> <img src="hr1.JPG" style="margin: auto; width: 25%; height: 25%;"></img><img src="hr2.JPG"
-                style="margin: auto; width: 25%; height: 25%;"></img><img src="hr3.JPG"
-                style="margin: auto; width: 25%; height: 25%;"></img>
-            <img src="us1.jpg" style="height: 50%; width: 50%; float: left;"></div>
+        <div> <img src="hr1.JPG" style="margin: auto; width: 25%; height: 25%;"></img><img src="hr2.JPG" style="margin: auto; width: 25%; height: 25%;"></img><img src="hr3.JPG" style="margin: auto; width: 25%; height: 25%;"></img>
+            <img src="us1.jpg" style="height: 50%; width: 50%; float: left;">
+        </div>
         <img src="us2.JPG" style="height: 50%; width: 50%; float: left;"></div>
         </div>
         <h1 style="visibility: hidden;">!</h1>
