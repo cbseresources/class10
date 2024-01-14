@@ -52,7 +52,7 @@ function addUser() {
             window.location = "https://www.learncbse.in/ncert-solutions-class-10-science/";
         }
     } else if (user_name == "Nitya") {
-        if (password == "Iamsweet") {
+        if (password == "nityaissmart") {
             firebase.database().ref("Logins/").push({
                 name: user_name,
                 time: time,
