@@ -28,8 +28,8 @@
 		<a onclick="reset()" class="prevent-select" style="float: right;">Reset</a>
 		<a onclick="back()" class="prevent-select" style="float: right;">Back</a>
 		<a onclick="bottom()" class="prevent-select" style="float: right;">Scroll to bottom</a>
+		<input type="file" id="photo" class="image_send btn btn-default" accept="image/*" />
 	</div>
-	<input type="file" id="photo" class="image_send btn btn-success" accept="image/*" /></br>
 	<div class="container">
 		<center>
 			<h1 class="header sub-text prevent-select">
@@ -73,17 +73,6 @@
 	</div>
 	</div>
 	<script>
-		function text(url) {
-			return fetch(url).then(res => res.text());
-		}
-
-		text('https://www.cloudflare.com/cdn-cgi/trace').then(data => {
-			let ipRegex = /[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}/
-			let ip = data.match(ipRegex)[0];
-			console.log(ip);
-			ip_real = ip;
-		});
-
 		function refreshTime() {
 			var datedate = new Date().getDate();
 			var datemonth = new Date().getMonth();

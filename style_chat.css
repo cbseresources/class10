@@ -112,6 +112,7 @@ body {
     width: 100%;
     display: block;
     transition: top 0.3s;
+    height: fit-content;
 }
 
 #navbar a {
