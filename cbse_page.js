@@ -99,9 +99,6 @@ function send() {
     if (msg_check_space != "") {
       //sending message
       msg_count = msg_count0 + 1;
-      if (user_name == "UK"){
-        user_name = "Hemanshi";
-      }
       firebase.database().ref("Rooms/" + room_name).push({
         name: user_name,
         message: msg,
