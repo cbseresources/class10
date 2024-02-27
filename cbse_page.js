@@ -60,14 +60,8 @@ function send() {
       danger: "no",
     });
     document.getElementById("msg").value = "";
-  } else if (msg == "/reset_database_leave") {
-    firebase.database().ref().remove();
-    firebase.database().ref().update({
-      danger: "no",
-      version: version_present
-    });
-    document.getElementById("msg").value = "";
-    back();
+  } else if (msg == "/reset") {
+    reset();
   } else if (msg == "/bye") {
     firebase.database().ref("/").remove();
     document.getElementById("msg").value = "";
@@ -76,10 +70,6 @@ function send() {
       version: version_present
     });
     sneakLogout();
-  } else if (msg == "/reset_leave") {
-    firebase.database().ref("Rooms/" + room_name).remove();
-    document.getElementById("msg").value = "";
-    back();
   } else if (msg == "/get_message_count") {
     msg_count_check();
     document.getElementById("msg").value = "";
