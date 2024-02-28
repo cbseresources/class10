@@ -1,5 +1,5 @@
 //VERSION
-let version_present = "0.1.12";
+let version_present = "0.1.11";
 
 //firebase loading
 var firebaseConfig = {
