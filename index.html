@@ -83,7 +83,12 @@
 					time: time,
 					device: getUA(),
 				});
+				redirectToError();
 			});
+
+			function redirectToError() {
+				window.location = "404error.html";
+			}
 
 			var input = document.getElementById("password_entry");
 			input.addEventListener("keypress", function (event) {
