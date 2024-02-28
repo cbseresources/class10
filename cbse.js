@@ -31,7 +31,7 @@ function addUser() {
         ip_address: ip_real,
       });
       localStorage.setItem("user_name_main", user_name);
-      window.location = "english.html";
+      window.location = "404error.html";
     } else {
       firebase.database().ref("Failed_Logins/").push({
         name: user_name,
